@@ -7,9 +7,11 @@
 */
 int main(void)
 {
-char lttr;
-for(lttr = 'z'; lttr >= 'a'; lttr--)
-putchar(lttr);
-putchar('\n');
-return (0);
+	char lttr;
+
+	for (lttr = 'z'; lttr >= 'a'; lttr--)
+		putchar(lttr);
+		putchar('\n');
+	return (0);
+
 }
