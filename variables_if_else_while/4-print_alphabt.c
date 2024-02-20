@@ -10,9 +10,14 @@ int main(void)
 	char lttr;
 
 	for (lttr = 'a'; lttr <= 'z'; lttr++)
+	{
 	if (lttr != 101 && lttr != 113)
+	{
 		putchar(lttr);
-		putchar('\n');
+	{
+	{
+	putchar('\n');
+
 	return (0);
 
 }
