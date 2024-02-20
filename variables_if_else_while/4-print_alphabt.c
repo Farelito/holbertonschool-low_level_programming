@@ -14,8 +14,8 @@ int main(void)
 	if (lttr != 101 && lttr != 113)
 	{
 		putchar(lttr);
-	{
-	{
+	}
+	}
 	putchar('\n');
 
 	return (0);
