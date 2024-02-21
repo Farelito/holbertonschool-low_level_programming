@@ -13,13 +13,16 @@ void print_alphabet_x10(void)
 	int count;
 	char alph;
 
-	for (count = 1; count <= 10; count++)
+	count =0;
+
+	while (count < 10)
 	{
 		for (alph = 'a'; alph <= 'z'; alph++)
 		{
 			putchar(alph);
 		}
 		putchar('\n');
+			count++;
 	}
 
 }
