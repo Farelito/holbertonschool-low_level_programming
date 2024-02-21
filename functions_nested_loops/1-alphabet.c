@@ -1,6 +1,7 @@
 #include "main.h"
 
 /**
+*c@:value
 * main - Entry point
 * Return: Always 0 (Success)
 */
