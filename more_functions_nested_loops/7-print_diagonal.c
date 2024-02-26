@@ -5,21 +5,23 @@
  */
 void print_diagonal(int n)
 {
-	int count, spc;
+	int i, count;
 
-	for (count = 0; count < n; count++)
+	if (n > 0)
 	{
-		for (spc = 0; spc < count; spc++)
-		{
+        for (i = 0; i < n; i++)
+	{
+	for (count = 0; count < i; count++)
+	{
 		_putchar(' ');
-		}
+	}
 		_putchar('\\');
 		_putchar('\n');
-	if (n < 0)
+	}
+	}
+	else
 	{
-		_putchar('\n');
-		n++;
-	}
-	}
 	_putchar('\n');
+	}
+
 }
