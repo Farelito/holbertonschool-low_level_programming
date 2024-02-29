@@ -7,25 +7,25 @@
 
 int _atoi(char *s)
 {
-	int sgn;
-	unsigned int rslt;
-	char *dgt;
+	int sign;
+	unsigned int num;
+	char *temp;
 
-	dgt = s;
-	rslt = 0;
-	sgn = 1;
-	while (*dgt != '\0' && (*dgt < '0' || *dgt > '9'))
+	temp = s;
+	num = 0;
+	sign = 1;
+	while (*temp != '\0' && (*temp < '0' || *temp > '9'))
 	{
-		if (*dgt == '-')
-			sgn *= -1;
-		dgt++;
+		if (*temp == '-')
+			sign *= -1;
+		temp++;
 	}
-	if (*dgt != '\0')
+	if (*temp != '\0')
 	{
 		do {
-			rslt = rslt * 10 + (*dgt - '0');
-			dgt++;
-		} while (*dgt >= '0' && *dgt <= '9');
+			num = num * 10 + (*temp - '0');
+			temp++;
+		} while (*temp >= '0' && *temp <= '9');
 	}
-	return (rslt * sgn);
+	return (num * sign);
 }
