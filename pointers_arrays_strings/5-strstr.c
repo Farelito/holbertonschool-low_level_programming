@@ -15,13 +15,13 @@ char *_strstr(char *haystack, char *needle)
     {
         const char *a = needle;
         while (*a != '\0'){
-            if ( *haystack != *needle)
+            if ( *haystack == *needle)
             {
                 return haystack;
             }
-            a--;
+            a++;
         }
-        haystack--;
+        haystack++;
     }
     return NULL;
 }
