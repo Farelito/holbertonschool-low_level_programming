@@ -1,22 +1,20 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "main.h"
 
-char *_memcpy(char *dest, char *src, unsigned int n){
-   
+/**
+ * _memcpy - Copies memory area
+ * @dest: where to copy the memory to
+ * @n: the number of bytes
+ * @src: the memory area to copy from
+ *
+ * Return: a pointer to @dest
+ */
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+	unsigned int i;
 
-    if (dest == NULL || src == NULL) 
-    {
-        fprintf(stderr, "Null pointer detected\n");
-        return NULL;
-    }
+	for (i = 0; i < n; i++)
+		dest[i] = src[i];
 
-   
-
-    while (n--)
-    {
-        *dest++ = *src++;
-    }
-    return(newdest);
+	return (dest);
 }
-  
+

@@ -10,7 +10,7 @@ unsigned int _strspn(char *s, char *accept){
         fprintf(stderr, "Null pointer detected\n");
         return(0);
     }
-    
+
     while (*s != '\0' && strchr(accept, *s) != NULL)
     {
        count++;
