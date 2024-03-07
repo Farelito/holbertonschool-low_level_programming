@@ -2,10 +2,17 @@
 #include <stdio.h>
 #include <string.h>
 
+/**
+ * _strspn - gets the length of a prefix substring
+ * @s: segment to return bytes from
+ * @accept: the bytes to include
+ * Return: the number of bytes in the initial segment of @s which consist only
+ * of bytes from @accept
+ */
 char *_strpbrk(char *s, char *accept)
 {
-    
-      if (s == NULL || accept == NULL) 
+
+      if (s == NULL || accept == NULL)
     {
         fprintf(stderr, "Null pointer detected\n");
         return(0);
