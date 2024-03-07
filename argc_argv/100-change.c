@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 	tot25 = cents % 25;
 	coins10 = tot25 / 10;
 	tot10 = tot25 %  10;
-	coins = tot10 / 5;
+	coins5 = tot10 / 5;
 	tot5 = tot10 %  5;
 	coins2 = tot5 / 2;
 	tot2 = tot5 %  2;
