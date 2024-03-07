@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
 /**
 *main - Multiply two numbers passed as command-line arguments
 *@argc: Number of command-line arguments
