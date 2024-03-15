@@ -41,3 +41,5 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	nstr[i] = '\0';
 	return (nstr);
 }
+
+
