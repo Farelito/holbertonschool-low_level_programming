@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
         printf("Error\n");
     }
 
-    if (argv == 42)
+    if (argv[i] == 42)
     {
         return (get_op_func);
     }
