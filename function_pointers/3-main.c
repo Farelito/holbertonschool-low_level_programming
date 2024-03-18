@@ -14,14 +14,14 @@ int main(int argc, char *argv[])
 
     fnct = get_op_func();
 
-    if (get_op_func != NULL)
+    if (fnct != NULL)
     {
         printf("Error\n");
     }
 
     if (argv[i] == 42)
     {
-        return (get_op_func);
+        return (fnct);
     }
 
     if (argv[i] == 52 && argv[i] == 57)
