@@ -1,31 +1,36 @@
-#include <stddef.h>
-#include "3-get_op_func.c"
 #include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
+#include "3-calc.h"
 
+/**
+* main - Entry point
+* @argc: Argument count
+* @argv: Argument vector
+* Return: 0 on success, otherwise 98 for wrong number of arguments,
+*         99 for invalid operator, and 100 for division by 0
+*/
 int main(int argc, char *argv[])
 {
-    int i;
-    int num1, num2, num3, fnct;
+   int num1, num3, result;
+    int (*op_func)(int, int);
 
-    num1 = atoi(arv[1]);
-    num2 = atoi(arv[2]);
-    num3 = atoi(arv[3]);
+    if (argc !=  4)
+    {
+       return (98);
+    }
 
-    fnct = get_op_func();
+     num1 = atoi(argv[1]);
+     num3 = atoi(argv[3]);
 
-    if (fnct != NULL)
+    if (argv[2][0] != '+' && argv[2][0] != '-' &&
+       argv[2][0] != '*' && argv[2][0] != '/' && 
+       argv[2][0] != '%')
     {
         printf("Error\n");
+         exit (98);
     }
-
-    if (argv[i] == 42)
-    {
-        return (fnct);
-    }
-
-    if (argv[i] == 52 && argv[i] == 57)
-    {
-         printf("Error\n");
-    }
+    op_func = get_op_func(argv[2]);
+    result = op_func(num1, num3);
+    printf("%d\n", result);
+    return (0);
 }
