@@ -3,11 +3,10 @@
 #include "3-calc.h"
 
 /**
-* main - Entry point
-* @argc: Argument count
-* @argv: Argument vector
-* Return: 0 on success, otherwise 98 for wrong number of arguments,
-*         99 for invalid operator, and 100 for division by 0
+* main - main function
+* @argc: argument count
+* @argv: string of arguments in array
+* Return: 0
 */
 int main(int argc, char *argv[])
 {
