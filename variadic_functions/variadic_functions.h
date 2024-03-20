@@ -23,3 +23,4 @@ typedef struct format_types
 	void (*f)(char *separator, va_list args);
 } f_dt;
 #endif
+
