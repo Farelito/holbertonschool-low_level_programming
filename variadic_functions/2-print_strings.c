@@ -3,11 +3,11 @@
 #include <stdarg.h>
 
 /**
-*print_numbers - ...
-*@separator: ...
-*@n: ...
+*print_strings - Prints strings, separated by a separator.
+*@separator: The separator to print between strings.
+*@n: The number of strings to print.
 *
-*Return: ...
+*Return: void
 */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
@@ -17,19 +17,19 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	if (n > 0)
 	{
-        	va_start(args, n);
+		va_start(args, n);
 
 		for (i = 0; i < n; i++)
 		{
 			str = va_arg(args, char *);
 
-			if ( str== NULL)
+			if (str == NULL)
 				printf("%s", str);
 			else
 				printf("%s", str);
 
 			if (separator != NULL && i != n - 1)
-			    printf("%s", separator);
+				printf("%s", separator);
 		}
 		va_end(args);
 	}
