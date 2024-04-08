@@ -1,5 +1,7 @@
 #include "lists.h"
-
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 /**
  * add_node - Adds a new node at the beginning of a linked list.
  * @head: A pointer to the pointer to the head node.
@@ -11,23 +13,26 @@
 list_t *add_node(list_t **head, const char *str)
 {
 list_t *new_node;
-char *duplicate;
+unsigned int size;
 
+while (str[size])
+{
+    size++;
+}
 new_node = malloc(sizeof(list_t));
-
-if (new_node == NULL) 
+if (!new_node) 
 {
-        return (NULL); 
+    free(new_node);
+    return (NULL); 
 }
-duplicate = strdup(str);
-if (duplicate == NULL) 
+new_node->str = strdup(str);
+if (new_node->str == NULL) 
 {
-free(duplicate); 
-return (NULL); 
+    free(new_node);
+    return (NULL); 
 }
-new_node->str = duplicate;
-new_node->len = strlen(str);
-new_node->next = *head;
-*head = new_node;
+new_node->len = size;
+new_node->next = (*head);
+(*head) = new_node;
 return (new_node);
 }
