@@ -10,12 +10,8 @@ size_t list_len(const list_t *h)
 {
 	size_t count = 0;
 
-	while (h)
+	while (h != null)
 	{
-		if (!h->str)
-		{
-             		printf("[0] (nill)\n");
-		}
 		h = h->next;
 		count++;
 	}
